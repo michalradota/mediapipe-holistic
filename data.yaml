@@ -1,0 +1,6 @@
+path: dataset
+train: images/train
+val: images/val
+
+nc: 6
+names: ['Head', 'Torso', 'Left Hand', 'Right Hand', 'Left Leg', 'Right Leg']
