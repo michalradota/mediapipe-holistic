@@ -106,10 +106,16 @@ cython_debug/
 # Output directories from training/processing
 # Te katalogi zazwyczaj zawierają wyniki działania skryptów,
 # modele, logi, które mogą być duże i są generowane ponownie.
-runs/
-# Allow specific subfolders in runs/detect/ but ignore their 'weights' subfolders
+# Ignore contents of runs directory by default
+runs/*
+# Do not ignore the detect directory itself, so we can make exceptions within it
+!runs/detect/
+# Ignore contents of runs/detect by default (except for what we un-ignore next)
+runs/detect/*
+# Allow specific subfolders in runs/detect/
 !runs/detect/train/
 !runs/detect/train2/
+# But ignore their 'weights' subfolders
 runs/detect/train/weights/
 runs/detect/train2/weights/
 
